@@ -1,0 +1,69 @@
+I, [2022-03-29T11:52:40.361968 #18826]  INFO -- : Registered expected interaction GET /orders
+D, [2022-03-29T11:52:40.362321 #18826] DEBUG -- : {
+  "description": "a request for orders",
+  "providerState": "there are orders",
+  "request": {
+    "method": "GET",
+    "path": "/orders"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "items": {
+          "json_class": "Pact::ArrayLike",
+          "contents": {
+            "name": "burger",
+            "quantity": 2,
+            "value": 100
+          },
+          "min": 1
+        }
+      },
+      "min": 1
+    }
+  }
+}
+I, [2022-03-29T11:52:40.374549 #18826]  INFO -- : Received request GET /orders
+D, [2022-03-29T11:52:40.374693 #18826] DEBUG -- : {
+  "path": "/orders",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:42357",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-03-29T11:52:40.375030 #18826]  INFO -- : Found matching response for GET /orders
+D, [2022-03-29T11:52:40.375213 #18826] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "items": {
+        "json_class": "Pact::ArrayLike",
+        "contents": {
+          "name": "burger",
+          "quantity": 2,
+          "value": 100
+        },
+        "min": 1
+      }
+    },
+    "min": 1
+  }
+}
+I, [2022-03-29T11:52:40.383251 #18826]  INFO -- : Verifying - interactions matched
+I, [2022-03-29T11:52:40.387601 #18826]  INFO -- : Cleared interactions
+I, [2022-03-29T11:52:40.392374 #18826]  INFO -- : Writing pact for GettingStartedOrderApi to /home/ext.mauricio.valente/proj/pact/pacts/gettingstartedorderweb-gettingstartedorderapi.json
